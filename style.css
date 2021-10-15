@@ -1,0 +1,372 @@
+/* BASIC SETUP */
+/* ---------------------color: rgb(167, 167, 167);----*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+ }
+ html{
+     font-family: 'Lato','Arial',sans-serif;
+     scroll-behavior:smooth;
+     text-rendering: optimizeLegibility;
+     font-size: 10px;
+ }  
+
+header{
+  background-image: url(resources/backgroundimg.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-position-x: center;
+  }
+
+.graphic{
+  position: absolute;
+  height: 100vh;
+  width: 96vh;
+}
+
+.graphic img{
+  width: 100%;
+}
+
+/*Buttons*/
+.button{
+  z-index: 1;
+  position: absolute;
+  width: 20%;
+  transform: translate(40vh,57vh);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.event,
+.music{
+  border-radius: 5%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+  color: #000000b7;
+  box-shadow: 5px 7.5px 7.5px 0;
+  transition: 0.5s;
+  padding: 3%;
+}
+
+.event{
+  background-color: #a70021;
+}
+.event a{
+  text-decoration: none;
+}
+
+
+.music{
+  background-color: white;
+}
+.music a{
+  text-decoration: none;
+  color: #a70021;
+}
+
+.event:hover,
+.music:hover{
+  box-shadow: 2px 3px 3px 0;
+}
+
+.event a:hover,
+.music a:hover{
+  transition: 0.5s;
+  color: #aaaaaa;
+}
+ /*About me section*/
+
+
+.aboutme-section{
+  height: 100vh;
+  background-color: rgb(230, 230, 230);
+}
+
+.aboutme-text{
+  padding: 0 30px 30px 30px;
+  width: 90%;
+  padding-left: 10%;
+}
+
+.aboutme-text h2{
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  font-size: 3rem;
+  color: #a70021;
+}
+
+.aboutme-text hr{
+  border: solid 1px black;
+}
+
+.container-aboutme{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.aboutme-name{
+  width: 40%;
+}
+
+.aboutme-name h1{
+  color: #000000;
+  font-size: 3rem;
+}
+
+.aboutme-name p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #000000;
+  margin-top: 16%;
+  font-size: 2rem;
+}
+
+.aboutme-img{
+  position: relative;
+  width: 25%;
+}
+
+.aboutme-img img{
+  width: 100%;
+  border-radius: 10%;
+}
+
+/* Events Section */
+.pathfinder{
+  width: 50%;
+  margin-top: 6rem;
+  margin-left: 50%;
+}
+
+#events{
+  color: transparent;
+}
+
+.events-section{
+  background: #78aca5;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider{
+  width: 80rem;
+  height: 50rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 50rem;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width:80rem;
+  height: 50rem;
+}
+
+/* Css for manual slide navigation */
+
+.navigation-manual{
+  position: absolute;
+  width: 80rem;
+  margin-top: -4rem;
+  display: flex;
+  justify-content: center;
+
+}
+
+.manual-btn{
+  border: 0.2rem solid #40D3DC;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 4rem;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*Css for automatic  navigation  */
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 80rem;
+  justify-content: center;
+  margin-top: 46rem;
+}
+
+.navigation-auto div{
+  border: solid 0.2rem #40D3DC;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 4rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+
+
+/* Discography */
+.discography-section{
+  background-color: rgb(230, 230, 230);
+  height: 240vh;
+}
+
+.latest_video{
+  display: flex;
+  flex-direction: row;
+}
+
+.discography-section h1{
+  font-size: 3rem;
+  padding-top: 60px;
+  margin-left: 8%;
+  padding-bottom: 10px;
+  color: #a70021;
+}
+
+.main_tv{
+  margin: 15px 70px 40px 0px;
+  margin-left: 11%;
+}
+
+.main_tv iframe{
+  width: 560px;
+  color: #000000;
+  height: 315px;
+  border-radius: 2%;
+  box-shadow: 10px 15px 15px 0;
+  transition: 0.5s;
+}
+ 
+.main_tv iframe:hover{
+  box-shadow: 5px 7.5px 7.5px 0;
+}
+
+.comment{
+  margin-top: 8px;
+  text-align: justify;
+  font-family: 'Oleo Script', cursive;
+  text-align: center;
+  font-size: 2rem;
+  margin-left: 4rem;
+}
+
+.description{
+ font-size: 2.4rem;
+ color: #a70021;
+}
+
+.comment p{
+  color: rgb(107, 107, 107);
+  margin: 2%;
+  box-shadow: 3px 3px 5px 2px;
+}
+
+.other_releases h2{
+  font-size: 3rem;
+  color: #a70021;
+}
+
+.other_releases hr{
+  margin: 1rem 30rem;
+}
+.video-grid{
+  padding: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-grid div{
+  display: flex;
+  flex-direction: row;
+  padding: 5rem;
+  justify-content: space-evenly;
+}
+
+.video-grid iframe{
+  width: 560px;
+  height: 315px;
+  margin: 2rem;
+  border-radius: 2%;
+}
+
+/*Just making website responsive */
+
+@media screen and (max-width:767px){
+ .graphic{
+   display: none;
+ }
+ .pathfinder{
+  margin-top: 30rem;
+}
+
+.button{
+  width: 30%;
+}
+
+}
+
+@media screen and (max-width:767px){
+  body{
+    height: 100vh;
+    background-color: #000000;
+    z-index: 100;
+    overflow: hidden;
+  }
+}
